@@ -19,8 +19,8 @@ jobs:
 
     - name: Build
       run: |
-        docker build -t artifact-python-demo .
-        docker tag ghcr.io/srnatan/ci-cd-artifact-python/artifact-python-demo:latest artifact-python-demo
+        docker build -t artifact-python-demo:latest .
+        docker tag artifact-python-demo ghcr.io/srnatan/ci-cd-artifact-python/artifact-python-demo:latest 
 
     - name: Deploy
       #el echo $CR_PAT está en la documentación de https://docs.github.com/es/packages/working-with-a-github-packages-registry/working-with-the-container-registry
