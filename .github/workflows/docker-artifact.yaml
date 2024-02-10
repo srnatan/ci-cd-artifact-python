@@ -25,5 +25,5 @@ jobs:
     - name: Deploy
       #el echo $CR_PAT está en la documentación de https://docs.github.com/es/packages/working-with-a-github-packages-registry/working-with-the-container-registry
       run: |
-        $ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+        echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
         docker push ghcr.io/srnatan/ci-cd-artifact-python/artifact-python-demo:latest
